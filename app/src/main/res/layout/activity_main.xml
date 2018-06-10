@@ -6,28 +6,5 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="248dp"
-        android:layout_height="342dp"
-        app:srcCompat="@drawable/image1"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="84dp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Storke Tower"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="32dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="248dp"
-        android:layout_height="29dp"
-        android:text="Storke Tower is UCSB's bell tower. Every UC campus has their own. This is ours!"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="468dp" />
 </android.support.constraint.ConstraintLayout>
