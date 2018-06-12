@@ -9,6 +9,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button getLocation;
+    public static final int MAP_REQUEST = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void nextButton(){
         Intent intent = new Intent(this, MapsActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, MAP_REQUEST);
     }
 }
