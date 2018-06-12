@@ -6,13 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--<Button-->
+        <!--android:id="@+id/loc_button"-->
+        <!--style="@style/Widget.AppCompat.Button.Colored"-->
+        <!--android:layout_width="137dp"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:text="Get Nearby!"-->
+        <!--android:textSize="18sp"-->
+        <!--tools:layout_editor_absoluteX="124dp"-->
+        <!--tools:layout_editor_absoluteY="205dp" />-->
+
     <Button
-        android:id="@+id/loc_button"
-        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/getPlace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get Nearby!"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="157dp" />
+        android:text="Button" />
 </android.support.constraint.ConstraintLayout>

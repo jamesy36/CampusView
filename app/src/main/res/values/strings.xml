@@ -2,4 +2,5 @@
     <string name="app_name">Campus View</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_building">BuildingActivity</string>
+    <string name="get_nearby">Get Nearby!</string>
 </resources>
