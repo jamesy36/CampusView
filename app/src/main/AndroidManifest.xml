@@ -37,7 +37,11 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".BuildingActivity"
+            android:label="@string/title_activity_building"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
