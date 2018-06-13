@@ -8,23 +8,55 @@
 
     <Button
         android:id="@+id/pop_button"
-        style="@style/Widget.AppCompat.Button.Colored"
+
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
+
         android:layout_marginTop="50dp"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
         android:text="Detailed Tour"
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="113dp" />
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/loc_button"
-        style="@style/Widget.AppCompat.Button.Colored"
+
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/button_shape"
+
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
         android:text="Quick Facts"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/pop_button"
-        tools:layout_editor_absoluteX="117dp" />
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pop_button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ucsb" />
 </android.support.constraint.ConstraintLayout>

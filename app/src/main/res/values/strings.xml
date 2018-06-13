@@ -38,4 +38,5 @@
         <item>"Mosher Alumni House:Holds several various events, usually for alumni. During finals week, it is another good, quiet place to study that has snacks!"</item>
     </string-array>
     <string name="title_activity_routes">RoutesActivity</string>
+    <string name="title_activity_place_picker">PlacePickerActivity</string>
 </resources>
