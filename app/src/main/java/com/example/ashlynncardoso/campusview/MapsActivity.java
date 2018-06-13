@@ -15,7 +15,6 @@ import android.view.View;
 import android.widget.Button;
 
 import android.location.LocationListener;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -51,7 +50,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
         Button getLocationBtn = (Button) findViewById(R.id.getLocationBtn);
-        TextView locationText = (TextView)findViewById(R.id.locationText);
 
         getLocationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,8 +144,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.412672, -119.850893)).title("Theater and Dance Building"));
         mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.413548, -119.850340)).title("Humanities and Social Sciences Building"));
         mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.412504, -119.849294)).title("Arts Building"));
-        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.412132, -119.848838)).title("Art Design and Architecture Museum"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.412132, -119.848838)).title("Art, Design and Architecture Museum"));
         mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.411791, -119.848462)).title("UCSB Bookstore"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.411539, -119.848027)).title("University Center"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.416358, -119.845287)).title("Campbell Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.416402, -119.844633)).title("Phelps Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.415720, -119.845266)).title("Ellison Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.415467, -119.843579)).title("Physical Science Building North"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.415430, -119.844577)).title("Buchanan Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.416038, -119.843536)).title("Department of Chemistry and Biochemistry"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.410084, -119.852687)).title("Carrillo Dining Commons"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.411053, -119.847011)).title("Ortega Dining Commons"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.409712, -119.845026)).title("De La Guerra Dining Commons"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.409522, -119.852240)).title("Manzanita Village Residence Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.411067, -119.852900)).title("San Rafael Residence Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.410296, -119.846783)).title("San Miguel Residence Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.409557, -119.846123)).title("San Nicolas Residence Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.409902, -119.843511)).title("Santa Cruz Residence Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.411079, -119.842958)).title("Anacapa Residence Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.411274, -119.845243)).title("Santa Rosa Residence Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.413872, -119.847576)).title("South Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.413624, -119.846718)).title("Girvetz Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.413770, -119.845532)).title("UCSB Library"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.411170, -119.845844)).title("College of Creative Studies"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.413978, -119.841336)).title("Harold Frank Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.414133, -119.843117)).title("Broida Hall"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.414838, -119.841256)).title("Engineering II"));
+        mMap.addMarker(new MarkerOptions().icon(icon).position(new LatLng(34.414838, -119.841256)).title("Mosher Alumni House"));
+
+
     }
 
     @Override
@@ -159,10 +184,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         String buildingName = marker.getTitle();
         Bundle bundle = new Bundle();
         for(String building: buildings){
-            if(building.contains(buildingName)){
+            if(building.contains(buildingName + ":")){
                 intent.putExtra("building", building);
-                bundle.putParcelable("latlng", marker.getPosition());
+                bundle.putParcelable("destination", marker.getPosition());
                 intent.putExtra("bundle", bundle);
+                bundle.putParcelable("current", currentMarker.getPosition());
                 startActivityForResult(intent, BUILDING_REQUEST);
                 return true;
             }

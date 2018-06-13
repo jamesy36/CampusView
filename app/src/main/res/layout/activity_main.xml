@@ -7,16 +7,24 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/pop_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:text="Detailed Tour"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="113dp" />
+
+    <Button
         android:id="@+id/loc_button"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="137dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="232dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginLeft="124dp"
-        android:layout_marginRight="123dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="231dp"
-        android:text="Get Nearby!"
-        android:textSize="18sp" />
+        android:layout_marginTop="25dp"
+        android:text="Quick Facts"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/pop_button"
+        tools:layout_editor_absoluteX="117dp" />
 </android.support.constraint.ConstraintLayout>

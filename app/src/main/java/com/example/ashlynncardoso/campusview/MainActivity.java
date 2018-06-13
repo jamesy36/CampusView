@@ -8,7 +8,9 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button getLocation;
+    private Button getPop;
+    private Button getNearby;
+
     public static final int MAP_REQUEST = 0;
 
     @Override
@@ -16,17 +18,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getLocation = (Button) findViewById(R.id.loc_button);
-        getLocation.setOnClickListener(new View.OnClickListener(){
+        getPop = (Button) findViewById(R.id.pop_button);
+        getPop.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                nextButton();
+                popButton();
+            }
+        });
+        getNearby = (Button) findViewById(R.id.loc_button);
+        getNearby.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                nearbyButton();
             }
         });
     }
 
-    private void nextButton(){
+    private void popButton(){
         Intent intent = new Intent(this, MapsActivity.class);
         startActivityForResult(intent, MAP_REQUEST);
+    }
+
+    private void nearbyButton(){
+//        Intent intent = new Intent(this, MapsActivity.class);
+//        startActivityForResult(intent, MAP_REQUEST);
     }
 }

@@ -43,6 +43,10 @@
         <activity
             android:name=".BuildingActivity"
             android:label="@string/title_activity_building"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RoutesActivity"
+            android:label="@string/title_activity_routes"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
